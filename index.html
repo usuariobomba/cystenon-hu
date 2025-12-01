@@ -12,20 +12,17 @@
     <link rel="stylesheet" href="css/formstyler.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
     <script src="js/jquery.js"></script>
-    <script src="js/jquery.formstyler.js"></script>
     <script src="js/jquery.placeholder.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/main.js"></script>
-    <script type="text/javascript" src="script_land.js" defer></script>
 
     <!-- Google Tag Manager (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=[SEU_ID_GLOBAL]"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=[COLE_SEU_ID_GLOBAL_AQUI]"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', '[SEU_ID_GLOBAL]');
+        gtag('config', '[COLE_SEU_ID_GLOBAL_AQUI]');
     </script>
 </head>
 
@@ -51,7 +48,7 @@
                     <div class="page-wrapper__inner posrel">
                         <div class="hbotles">
                             <div class="form_order-header">
-                                <form action="/api/order" class="right order_form al-form" method="POST"
+                                <form action="/api/order" class="right form-vercel" method="POST"
                                     style="background-color:#fff;padding:15px"><select class="al-country" name="country"
                                         style="display:none"></select>
                                     <input type="hidden" name="subacc" class="subacc_input">
@@ -73,8 +70,8 @@
                                     </div>
                                     <div class="row">
                                         <em class="yel_text lt10" style="font-size:25px">Ár:<span
-                                                class="price_main al-cost">€</span> <span
-                                                class="price_old al-cost-promo">€</span>!</em>
+                                                class="price_main al-cost">11400 HUF</span> <span
+                                                class="price_old al-cost-promo">22800 HUF</span>!</em>
                                         <em class="yel_text lt11" style="font-size:12px"></em>
                                     </div>
                                     <div class="row text-center">
@@ -874,7 +871,7 @@
                             igényelhet</span><br>
                         <br>
                         <div class="form_order">
-                            <form action="/api/order" class="right order_form al-form" id="order_form" method="POST"
+                            <form action="/api/order" class="right form-vercel" id="order_form" method="POST"
                                 name="order_form"><select class="al-country" name="country"
                                     style="display:none"></select>
                                 <input type="hidden" name="subacc" class="subacc_input">
@@ -893,8 +890,8 @@
                                 </div>
                                 <div class="row">
                                     <em class="yel_text" style="font-size:25px"><span class="lt1723">Ár:</span><span
-                                            class="price_main al-cost">€</span> <span
-                                            class="price_old al-cost-promo">€</span>!</em>
+                                            class="price_main al-cost">11400HUF</span> <span
+                                            class="price_old al-cost-promo">22800HUF</span>!</em>
                                     <em class="yel_text" style="font-size:10px"></em>
                                 </div>
                                 <div class="row text-center">
@@ -988,12 +985,13 @@
         <div
             style="background-color: #fefefe; margin: 15% auto; padding: 30px; border-radius: 10px; width: 90%; max-width: 500px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
             <div style="font-size: 48px; color: #10b981; margin-bottom: 20px;">✓</div>
-            <h2 style="color: #1f2937; font-size: 24px; margin-bottom: 15px; font-weight: bold;">Köszönjük!</h2>
-            <p style="color: #6b7280; font-size: 16px; margin-bottom: 25px;">Rendelését sikeresen rögzítettük. Hamarosan
-                felvesszük Önnel a kapcsolatot!</p>
+            <h2 style="color: #1f2937; font-size: 24px; margin-bottom: 15px; font-weight: bold;">Rendelését fogadtuk!
+            </h2>
+            <p style="color: #6b7280; font-size: 16px; margin-bottom: 25px;">Köszönjük! Munkatársunk hamarosan felhívja
+                Önt.</p>
             <button onclick="closeSuccessModal()"
                 style="background-color: #10b981; color: white; padding: 12px 30px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">
-                Bezárás
+                Rendben
             </button>
         </div>
     </div>
@@ -1038,8 +1036,8 @@
                 // Disparar Pixel de Conversão do Google Ads
                 if (typeof gtag === 'function') {
                     gtag('event', 'conversion', {
-                        'send_to': '[SEU_LABEL_DE_VENDA]',
-                        'value': 1.0,
+                        'send_to': '[COLE_SEU_LABEL_DE_VENDA_AQUI]',
+                        'value': 20.0, // Payout Estimado HU
                         'currency': 'USD',
                         'transaction_id': Date.now()
                     });
@@ -1071,7 +1069,9 @@
     <script type="text/javascript">
         $(function () { $("a[href^='#']").click(function () { var t = $(this).attr("href"); return $("html, body").animate({ scrollTop: $(t).offset().top + "px" }), !1 }) })
     </script>
-    <script src="/tl-validator.js?country=hu&label=false"></script>
+
+    <!-- UI Fix Script - Restaura funcionalidades visuais -->
+    <script src="js/ui-fix.js"></script>
 </body>
 
 </html>
