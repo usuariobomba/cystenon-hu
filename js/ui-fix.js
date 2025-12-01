@@ -110,13 +110,13 @@
 
         // Botão anterior
         const prevBtn = document.createElement('button');
-        prevBtn.innerHTML = '&#8592; Anterior';
+        prevBtn.innerHTML = '&#8592; előző';
         prevBtn.style.cssText = 'background: #10b981; color: white; border: none; padding: 10px 20px; margin: 0 10px; cursor: pointer; border-radius: 5px; font-size: 16px;';
         prevBtn.addEventListener('click', () => changeReview('prev'));
 
         // Botão próximo
         const nextBtn = document.createElement('button');
-        nextBtn.innerHTML = 'Próximo &#8594;';
+        nextBtn.innerHTML = 'következő &#8594;';
         nextBtn.style.cssText = 'background: #10b981; color: white; border: none; padding: 10px 20px; margin: 0 10px; cursor: pointer; border-radius: 5px; font-size: 16px;';
         nextBtn.addEventListener('click', () => changeReview('next'));
 
