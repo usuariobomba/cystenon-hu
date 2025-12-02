@@ -59,13 +59,17 @@
                                     <div class="row">
                                         <label class="title_form lt8">Név</label>
                                         <div class="row_inner">
-                                            <input name="name" required="true" placeholder="Név" type="text">
+                                            <input name="name" required minlength="2" maxlength="50"
+                                                pattern="[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s'\-]+" placeholder="Név" type="text"
+                                                autocomplete="name">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <label class="title_form lt9">Telefonszám</label>
                                         <div class="row_inner">
-                                            <input name="phone" required="true" placeholder="Telefonszám" type="tel">
+                                            <input name="phone" required pattern="^(\+36|06)?[1-9][0-9]{8}$"
+                                                placeholder="Telefonszám (pl. +36301234567)" type="tel"
+                                                autocomplete="tel">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -879,13 +883,16 @@
                                 <div class="row">
                                     <label class="title_form lt1721">Név</label>
                                     <div class="row_inner">
-                                        <input name="name" required="true" placeholder="Név" type="text">
+                                        <input name="name" required minlength="2" maxlength="50"
+                                            pattern="[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s'\-]+" placeholder="Név" type="text"
+                                            autocomplete="name">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <label class="title_form lt1722">Telefonszám</label>
                                     <div class="row_inner">
-                                        <input name="phone" required="true" placeholder="Telefonszám" type="tel">
+                                        <input name="phone" required pattern="^(\+36|06)?[1-9][0-9]{8}$"
+                                            placeholder="Telefonszám (pl. +36301234567)" type="tel" autocomplete="tel">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -1069,6 +1076,9 @@
     <script type="text/javascript">
         $(function () { $("a[href^='#']").click(function () { var t = $(this).attr("href"); return $("html, body").animate({ scrollTop: $(t).offset().top + "px" }), !1 }) })
     </script>
+
+    <!-- Form Validation Script - Validação de formulários -->
+    <script src="js/form-validation.js"></script>
 
     <!-- UI Fix Script - Restaura funcionalidades visuais -->
     <script src="js/ui-fix.js"></script>
